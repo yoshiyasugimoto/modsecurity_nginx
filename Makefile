@@ -15,3 +15,9 @@ setting modsecurity configure:
 	# add -> SecAuditLog /log/modsec_audit.log
 	# chenge -> SecAuditEngine RelevantOnly -> SecAuditEngine on
 	# nginx -s reload
+build:
+	docker-compose up --build
+exec:
+	docker-compose exec modsecurity /bin/bash
+clean:
+	docker-compose down -v
