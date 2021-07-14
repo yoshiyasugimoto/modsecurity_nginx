@@ -8,7 +8,7 @@ RUN apt-get update && \
         apt-utils autoconf automake build-essential \
         git libcurl4-openssl-dev libgeoip-dev liblmdb-dev \
         libpcre++-dev libtool libxml2-dev libyajl-dev \
-        pkgconf wget zlib1g-dev
+        pkgconf wget zlib1g-dev jq
 WORKDIR /root
 RUN git clone --depth 1 -b v3/master --single-branch https://github.com/SpiderLabs/ModSecurity
 RUN cd ModSecurity && git submodule init && git submodule update
