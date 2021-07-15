@@ -7,3 +7,5 @@ exec:
 	docker-compose exec modsecurity /bin/bash -c "nginx -s reload && tail -f /var/log/modsec_audit.log | jq"
 clean:
 	docker-compose down -v
+# http://127.0.0.1/index.html?testparam=test
+# http://127.0.0.1/index.html
