@@ -3,7 +3,5 @@ version: "3.8"
 services:
   modsecurity:
     build: ./modsecurity/
-    #   context: modsecurity
-    #   dockerfile: Dockerfile
     ports:
       - 80:80 

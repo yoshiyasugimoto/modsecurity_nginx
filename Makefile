@@ -1,7 +1,7 @@
 run:
 	docker run -it -p 80:80 --name modsecurity nginx:1.19.9 /bin/bash
 tail:
-	tail -f /log/all_access.log | jq
+	tail -f /var/log/modsec_audit.log | jq
 create log:
 	mkdir log && touch /log/all_access.log
 server start:
@@ -18,6 +18,6 @@ setting modsecurity configure:
 build:
 	docker-compose up --build
 exec:
-	docker-compose exec modsecurity /bin/bash
+	docker-compose exec modsecurity /bin/bash -c "nginx -s reload && tail -f /var/log/modsec_audit.log | jq"
 clean:
 	docker-compose down -v
