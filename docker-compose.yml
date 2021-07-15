@@ -5,3 +5,5 @@ services:
     build: ./modsecurity/
     ports:
       - 80:80 
+    volumes:
+        - ./modsecurity/log/modsec_audit.log:/var/log/modsec_audit.log
