@@ -31,3 +31,6 @@ RUN sed -i -e '6a load_module modules/ngx_http_modsecurity_module.so;' /etc/ngin
 
 COPY conf.d/main.conf /etc/nginx/modsecurity/main.conf
 COPY conf.d/default.conf /etc/nginx/conf.d/default.conf
+
+# エラーになる
+# RUN /bin/bash -c "nginx -s reload
