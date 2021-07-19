@@ -33,4 +33,4 @@ COPY conf.d/main.conf /etc/nginx/modsecurity/main.conf
 COPY conf.d/default.conf /etc/nginx/conf.d/default.conf
 
 # エラーになる
-# RUN /bin/bash -c "nginx -s reload
+RUN /bin/sh -c nginx -s reload
