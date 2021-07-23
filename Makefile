@@ -7,5 +7,8 @@ exec:
 	docker-compose exec modsecurity /bin/bash -c "tail -f /var/log/modsec_audit.log | jq"
 clean:
 	docker-compose down -v
+# waf log　特定のパラメータによる異常検知
 # http://127.0.0.1/index.html?testparam=test
 # http://127.0.0.1/index.html
+# basic認証
+# http://127.0.0.1/private
